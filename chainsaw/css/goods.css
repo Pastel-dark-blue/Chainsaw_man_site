@@ -1,0 +1,51 @@
+﻿/*ТОВАРЫ*/
+
+    #goods {
+        background-color: #c6b4e7;
+        margin-top: -7vw;
+        padding-top: 4vw;
+        padding-bottom: 5vw;
+    }
+
+    .go_to_goods {
+        background-color: #9F80D6;
+        font-size: 1.5vw;
+        font-weight: bold;
+        margin: auto;
+        padding: 1vw 2vw;
+        border-radius: 50px;
+        width: 19.8vw;
+        color: black;
+        transition: 0.2s;
+    }
+
+    .go_to_goods:hover {
+        background-color: rgba(219, 158, 0, 0.7);
+        box-shadow: 0 0 17px rgba(219, 158, 0, 0.5);
+        transition: 0.2s;
+    }
+
+    #goods > h1{
+        margin-bottom: 1.6vw;
+    }
+
+    #goods > container{
+        display: flex;
+        height: 15vw;
+        align-content: center;
+    }
+
+    #goods img {
+        width: 13vw;
+        margin-bottom: 1.6vw;
+        transition: transform 0.2s;
+    }
+
+    .img_container {
+        width: 13vw;
+        margin: auto;
+        display: block;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+

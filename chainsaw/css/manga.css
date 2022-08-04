@@ -1,0 +1,173 @@
+﻿/*МАНГА*/
+
+    #manga {
+        position: relative;
+        margin-top: -36vw;
+    }
+
+    #manga > img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #manga > h1{
+        margin-bottom: 0.2em;
+    }
+
+    .chapter_container {
+        background-color: rgba(31, 3, 82, 0.3);
+        border: 1vw solid rgba(31, 3, 82, 0.6);
+        border-radius: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        left: 15vw;
+        right: 15vw;
+        position: absolute;
+        top: 15vw;
+        padding: 2vw 3vw;
+        height: 37vw;
+        overflow-x: auto;
+    }
+
+    /*\\\\\\\ стили скроллбара*/
+    .chapter_container::-webkit-scrollbar {
+        display: block;
+        width: 8px;
+    }
+
+    .chapter_container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .chapter_container::-webkit-scrollbar-thumb {
+        background-color: #C2D600;
+        border-radius: 20px;
+    }
+
+    .chapter_container::-webkit-scrollbar-track-piece:end {
+        background: transparent;
+        margin-bottom: 20px;
+    }
+
+    .chapter_container::-webkit-scrollbar-track-piece:start {
+        background: transparent;
+        margin-top: 20px;
+    }
+    /*\\\\\\\*/
+
+    .chapter {
+        width: 12vw;
+        margin-bottom: 4vw;
+        position: relative;
+        z-index: 0;
+        color: #EEEEEE;
+        font-size: 1.2vw;
+        text-decoration: none;
+    }
+
+    .chapter:not(:nth-child(4n)) {
+        margin-right: 3vw;
+    }
+
+    .chapter img {
+        width: 12vw;
+        margin-bottom: -6px;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .chapter > .chap_name {
+        background-color: rgba(31, 3, 82, 0.8);
+        margin: 0;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding: 1vw;
+        height: 5vw;
+        width: 12vw;
+    }
+
+    .chapter .download {
+        background-color: rgba(128, 80, 214, 0.8);
+        margin: 0;
+        border-radius: 0 0 30px 30px;
+        text-transform: uppercase;
+        padding: 1vw;
+    }
+
+    a > .download {
+        color: #EEEEEE;
+        transition: 0.4s;
+    }
+
+    a > .download:hover {
+        background-color: rgba(131, 144, 215, 0.9);
+        transition: 0.4s;
+    }
+
+    .chapter p {
+        text-align: center;
+    }
+
+    @media(max-width: 968px){
+        .chapter:not(:nth-child(4n)) {
+            margin-right: 0;
+        }
+
+        .chapter:not(:nth-child(3n)) {
+            margin-right: 2vw;
+        }
+
+        .chapter {
+            width: 15vw;
+        }
+
+        .chapter img {
+            border-radius: 15px 15px 0 0;
+            width: 15vw;
+        }
+
+        .chapter > .download {
+            border-radius: 0 0 15px 15px;
+        }
+
+        .chapter_container {
+            border-radius: 20px;
+        }
+        .chapter > .chap_name {
+            background-color: rgba(31, 3, 82, 0.8);
+            margin: 0;
+            padding: 1.5vw;
+            width: 15vw;
+        }
+    }
+
+    @media(max-width: 490px) {
+        .chapter {
+            width: 17vw;
+            font-size: 1.4vw;
+        }
+
+        .chapter img {
+            border-radius: 10px 10px 0 0;
+            width: 17vw;
+        }
+
+        .chapter > .download {
+            border-radius: 0 0 10px 10px;
+        }
+
+        .chapter_container {
+            border-radius: 10px;
+            left: 10vw;
+            right: 10vw;
+        }
+
+        .chapter > .chap_name {
+            background-color: rgba(31, 3, 82, 0.8);
+            margin: 0;
+            padding: 2vw;
+            padding-top: 2.5vw;
+            width: 17vw;
+        }
+    }

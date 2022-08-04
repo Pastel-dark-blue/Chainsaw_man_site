@@ -1,0 +1,176 @@
+﻿/*ПЕРСОНАЖИ*/
+
+    #characters{
+        position: relative;
+    }
+
+    #characters .bg{
+        z-index: -1;
+        object-fit: cover;
+        top: 0.5vw;
+        position: absolute;
+        width: 100%;
+    }
+
+    #characters h1{
+        padding: 8vw 0 1vw 0;
+    }
+
+    #characters .po{
+        position: absolute;
+        top: -17vw;
+        left: 15vw;
+        transform: rotate(65deg);
+        height: 40vw;
+    }
+
+    .char-choice_container{
+        width: 65vw;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .char-choice_container button{
+        width: 9vw;
+        height: 9vw;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-size 0.3s ease;
+    }
+
+     .char-choice_container button:hover{
+         background-size: 11vw;
+         transition: background-size 0.3s ease;
+     }
+
+    .char-choice{
+        margin-bottom: 7vw;
+    }
+
+    .characterInfo{
+        position: relative;
+    }
+
+    .char{
+        position: absolute;
+        top: 0;
+    }
+
+    .aki{
+        background: url('../img/aki.jpg') no-repeat;
+        background-position: 50% 50%;
+        background-size: 9vw;
+    }
+
+    .den{
+        background: url('../img/den.jpg') no-repeat;
+        background-position: 50% 0%;
+        background-size: 9vw;
+    }
+
+    .poch{
+        background: url('../img/poch.jpg') no-repeat;
+        background-position: 50% 10%;
+        background-size: 9vw;
+    }
+
+    .power{
+        background: url('../img/power.jpg') no-repeat;
+        background-position: 50% 10%;
+        background-size: 9vw;
+    }
+
+    .mak{
+        background: url('../img/mak.jpg') no-repeat;
+        background-position: 50% 0%;
+        background-size: 9vw;
+    }
+
+    .char{
+        width: 75vw;
+        margin: auto;
+        position: relative;
+        display: none;
+    }
+
+    /*Для свойства display не работают переходы transition, 
+    поэтому для плавного появления блока приходится использовать анимацию*/
+    @-webkit-keyframes fadeIn {
+        from { opacity: 0; }
+          to { opacity: 1; }
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+          to { opacity: 1; }
+    }
+
+    .active_char{ 
+        display: block;
+        animation: fadeIn 1s;
+    }
+
+    .desc{
+        width: 50vw;
+        margin-left: 22vw;
+    }
+
+    .char img{
+        width: 15vw;
+        box-shadow: 1.5vw 1.5vw 0 0.4vw rgba(131, 144, 215, 0.5);
+        position: absolute;
+    }
+
+    .name{
+        display: inline-block;
+        background-color: #8390D7;
+        padding: 1vw 3vw;
+        font-size: 1.7vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        text-shadow: 0 0 1em blue;
+    }
+
+    .no_spoilers_desc{
+        padding: 2vw 1.5vw;
+        background-color: rgba(131, 144, 215, 0.7);
+        font-size: 1.7vw;
+        margin-top: 0;
+        margin-bottom: 3vw;
+    }
+
+    .spoilerWord {
+        display: inline-block;
+        background-color: #9F80D6;
+        padding: 1vw 3vw;
+        font-size: 1.7vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        cursor: pointer;
+        text-shadow: 0 0 1em purple;
+    }
+
+    .spoilerWord .arrow{
+        display: inline-block;
+        margin-left: 1vw;
+        transition: transform 0.2s ease-out;
+    }
+
+    .spoiler {
+        padding: 0 1.5vw;
+        background-color: rgba(159, 128, 214, 0.7);
+        font-size: 1.7vw;
+        margin-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+   .is_opened{
+       transform-origin: center;
+       transform: rotate(180deg);
+    }

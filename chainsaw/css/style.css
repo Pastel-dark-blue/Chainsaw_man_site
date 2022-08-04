@@ -1,0 +1,23 @@
+﻿/*стили для элементов всей страницы*/
+
+    @font-face {
+        font-family: 'Quantico';
+        src: url(Quantico-Regular.ttf);
+    }
+
+    * {
+        font-family: 'Quantico';
+        text-decoration: none;
+    }
+
+    .wrapper{
+        overflow: hidden;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 4vw;
+        font-weight: 700;
+        color: #EEEEEE;
+        text-align: center;
+    }

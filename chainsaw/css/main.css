@@ -1,0 +1,280 @@
+﻿    /*ГЛАВНАЯ*/
+
+    /*--> заголовки Chainsaw*/
+
+    /*на фоне раздела "главная" ставим svg-изображение*/
+    .foreground_main {
+        position: absolute;
+        top: 0;
+        z-index: -2;
+    }
+
+    /*контейнер с надписями Chainsaw*/
+    .title-container{
+        display: flex;
+        margin-top: 90px;
+        margin-bottom: 40px;
+        height: 15.5vw;
+        justify-content: center;
+    }
+
+    .title_chainsaw_man {
+        position: relative; /*позиционирование надписей будет относительно блока с классом title_chainsaw_man*/
+        width: 63vw;
+        transform: scale(0.9);
+    }
+
+    .title_1 {
+        position:absolute;
+        color: rgba(101, 7, 146, 0.7);
+        left: 18.4vw;
+        top: 7vw;
+        font-size: 8vw;
+        font-weight: bold;
+        z-index: 5;
+    }
+
+    .title_2 {
+        position: absolute;
+        color: rgba(219, 153, 0, 0.8);
+        left: 13.5vw;
+        top: 3.2vw;
+        font-size: 8vw;
+        font-weight: bold;
+        z-index: 4;
+    }
+
+    .title_3 {
+        position: absolute;
+        color: rgba(162, 209, 0, 0.8);
+        left: 10.3vw;
+        top: 0.4vw;
+        font-size: 6vw;
+        font-weight: bold;
+        z-index: 3;
+    }
+
+    .title_4 {
+        position: absolute;
+        color: rgba(227, 126, 175, 0.7);
+        top: 2vw;
+        font-size: 9vw;
+        font-weight: bold;
+        z-index: 2;
+    }
+
+    /*--> slick слайдер*/
+    /*классы, определенные мной*/
+    .slider{
+        position: relative;
+        margin: 0 30px 0 30px;
+    }
+
+    .slider-item_img {
+        height: 540px;
+    }
+
+    .slick-item {
+        text-align: center;
+    }
+
+    /*классы, определенные плагином*/
+
+    /* Ограничивающая оболочка */
+    .slick-list {
+        overflow: hidden; /*слайды вне оболочки видны не будут*/
+        margin: 0 100px 0 100px;
+        text-align: center;
+    }
+    /* Лента слайдов */
+    .slick-track {
+        display: flex;
+    }
+
+    /* Стрелки */
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        margin: -35px 0 0 0; /*70 / 2 = 35, 70 - высота svg-изображения со стрелкой*/
+        z-index: 4;
+        font-size: 0;
+        width: 70px;
+        height: 70px;
+        border: 0;
+        cursor: pointer;
+    }
+    /* Стрелка влево */
+    .slick-arrow.slick-prev {
+        left: 0;
+        background: url("../img/arrow_l.svg") no-repeat;
+    }
+    /* Стрелка вправо */
+    .slick-arrow.slick-next {
+        right: 0;
+        background: url("../img/arrow_r.svg") no-repeat;
+    }
+
+    /* Точки (булиты) под слайдером */
+    .slick-dots {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .slick-dots li {
+        list-style-type: none;
+        margin: 0 10px;
+    }
+
+    /* Активная точка */
+    .slick-dots li.slick-active button {
+        background-color: #C2D600;
+        border: none;
+    }
+    /* Элемент точки */
+    .slick-dots li button {
+        font-size: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        border: solid #C2D600 2px;
+    }
+
+    /*Адаптив для слайдера*/
+    @media (max-width:1740px) {
+        .slider-item_img {
+            height: 640px;
+        }
+    }
+
+    @media (max-width: 1545px){
+        .slider-item_img {
+            height: 550px;
+        }
+        .foreground_main {
+            top: -90px;
+        }
+    }
+
+    @media (max-width: 1360px) {
+        .slider-item_img {
+            height: 450px;
+        }
+
+        .foreground_main {
+            top: -210px;
+        }
+    }
+
+    @media (max-width:1200px) {
+        .slider-item_img {
+            height: 380px;
+        }
+
+        .foreground_main {
+            top: -310px;
+        }
+    }
+
+    @media (max-width:1095px) {
+        .slider-item_img {
+            height: 380px;
+        }
+
+        .foreground_main {
+            top: -350px;
+        }
+    }
+
+    @media (max-width:1025px) {
+        .slider-item_img {
+            height: 410px;
+        }
+
+        .foreground_main {
+            top: -360px;
+        }
+    }
+
+
+    @media (max-width:885px) {
+        .slider-item_img {
+            height: 430px;
+        }
+
+        .foreground_main {
+            top: -400px;
+        }
+
+        .slick-arrow {
+            top: 50%;
+            margin: -20px 0 0 0;
+            width: 40px;
+            height: 40px;
+        }
+        .slick-arrow {
+            top: 50%;
+            margin: -20px 0 0 0;
+            width: 40px;
+            height: 40px;
+        }
+
+        .slick-arrow.slick-prev {
+            background: url("../img/arrow_l_small.svg") no-repeat;
+        }
+
+        .slick-arrow.slick-next {
+            background: url("../img/arrow_r_small.svg") no-repeat;
+        }
+    }
+
+    @media (max-width:830px) {
+        .slider-item_img {
+            height: 350px;
+        }
+
+        .foreground_main {
+            top: -450px;
+        }
+
+        .slick-list {
+            margin: 0 70px 0 70px;
+        }
+
+        .slick-dots li {
+            margin: 0 5px;
+        }
+    }
+
+    @media (max-width:735px) {
+        .slider-item_img {
+            height: 280px;
+        }
+
+        .foreground_main {
+            top: -530px;
+        }
+    }
+
+    @media (max-width:600px) {
+        .slider-item_img {
+            height: 300px;
+        }
+
+        .foreground_main {
+            top: -550px;
+        }
+    }
+
+    @media (max-width:500px) {
+        .slider-item_img {
+            height: 260px;
+        }
+
+        .foreground_main {
+            top: -600px;
+        }
+    }
+

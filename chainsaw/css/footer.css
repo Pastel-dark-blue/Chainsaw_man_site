@@ -1,0 +1,24 @@
+﻿ /*ПОДВАЛ*/
+
+    .footer {
+        height: 7vw;
+        background-color: #1F0352;
+        color: #E5EF85;
+        font-size: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 7vw;
+    }
+    .footer > .container {
+        display: flex;
+        justify-content: space-between;
+        width: 14vw;
+        margin: 0;
+    }
+    .footer > .container div {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+        background-color: #9F80D6;
+    }

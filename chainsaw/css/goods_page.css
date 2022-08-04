@@ -1,0 +1,211 @@
+﻿    body {
+        background-color: rgba(61, 39, 101, 0.98);
+    }
+
+    .neon_container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .neon {
+        margin: auto;
+        border-radius: 10px;
+        margin-top: 9vw;
+        margin-bottom: 5vw;
+        color: rgba(128, 80, 214, 3);
+        font-size: 2vw;
+        display: inline-block;
+        border: 0.4vw solid rgba(128, 80, 214, 3);
+        padding: 1vw;
+        text-shadow: 0 0 0.16em rgba(128, 80, 214, 2.5), 0 0 1em currentColor;
+        box-shadow: inset 0 0 0.6em 0 #8050D6, 0 0 0.5em 0 #8050D6;
+        transition: all 0.3s linear;
+    }
+
+    .neon:hover {
+        color: rgba(61, 39, 101, 0.7);
+        background-color: rgba(128, 80, 214, 1);
+        box-shadow: 0 0 1.5em 0 #8050D6;
+        transition: all 0.4s linear;
+    }
+
+    .good_container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content > img {
+        height: 35vw;
+        float: left;
+        margin-right: 4vw;
+    }
+
+    .flex_cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 35vw;
+    }
+
+    .good_item {
+        margin-bottom: 6vw;
+        padding-left: 2vw;
+        border-left: 0.8vw solid #8050D6;
+    }
+
+    .desc {
+        color: #E5EF85;
+        font-size: 1.6vw;
+        margin: 0;
+    }
+
+    .vol {
+        color: #E5EF85;
+        font-size: 1.7vw;
+        font-weight: 600;
+    }
+
+    .author {
+        color: #E5EF85;
+        font-size: 1.4vw;
+    }
+
+    .cost {
+        background-color: rgba(128, 80, 214, 0.3);
+        font-size: 1.6vw;
+        color: rgba(255, 255, 255, 0.9);
+        display: inline-block;
+        padding: 0.5vw;
+        margin-right: 3vw;
+    }
+
+    .buy {
+        background-color: rgba(219, 158, 0, 0.6);
+        border-radius: 30px;
+        font-size: 1.6vw;
+        color: rgba(255, 255, 255, 0.9);
+        display: inline-block;
+        padding: 0.6vw 1.3vw;
+        transition: 0.2s;
+    }
+
+    .buy:hover {
+        background-color: rgba(219, 158, 0, 0.9);
+        box-shadow: 0 0 17px rgba(219, 158, 0, 0.6);
+        transition: 0.2s;
+    }
+
+    .send {
+        display: inline-block;
+        padding: 0.5vw 1vw;
+        background-color: rgba(128, 80, 214, 0.6);
+        border: 0.4vw solid #8050D6;
+        border-radius: 30px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.6vw;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .send:hover {
+        background-color: rgba(128, 80, 214, 0.4);
+        border: 0.4vw solid rgba(128, 80, 214, 0.6);
+        transition: 0.2s;
+        animation: swing 2s;
+    }
+
+    @keyframes swing {
+        15% {
+            -webkit-transform: translateX(9px);
+            transform: translateX(9px);
+        }
+
+        30% {
+            -webkit-transform: translateX(-9px);
+            transform: translateX(-9px);
+        }
+
+        40% {
+            -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+        }
+
+        50% {
+            -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+        }
+
+        65% {
+            -webkit-transform: translateX(3px);
+            transform: translateX(3px);
+        }
+
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+
+    .content{
+        display: inline-block;
+    }
+
+    .input_email {
+        border-radius: 30px;
+        border: none;
+        font-size: 1.6vw;
+        padding: 0.6vw 1.3vw;
+        margin-right: 2vw;
+        background: linear-gradient(45deg, rgba(128, 80, 214, 0.4) 50%, rgba(131, 144, 215, 0.7) 50%, rgba(131, 144, 215, 0.7) 100%);
+        color: #EEEEEE;
+    }
+
+    .input_email::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #EEEEEE;
+        opacity: 1; /* Firefox */
+    }
+
+    .input_send {
+        border-radius: 10px;
+        border: none;
+        font-size: 1.8vw;
+        padding: 0.6vw 1.5vw;
+        background-color: rgba(131, 144, 215, 0.7);
+        color: #EEEEEE;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .input_send:hover {
+        background-color: rgba(131, 144, 215, 0.9);
+        box-shadow: 0 0 10px rgba(131, 144, 215, 1);
+        transition: 0.2s;
+    }
+
+    @media(max-width: 1115px) {
+        .neon {
+            margin-top: 13vw;
+            margin-bottom: 7vw;
+        }
+    }
+
+    @media(max-width: 560px) {
+        .neon {
+            margin-top: 17vw;
+        }
+    }
+
+    @media(max-width: 430px) {
+        .neon {
+            margin-top: 20vw;
+        }
+    }
+
+    @media(max-width: 430px) {
+        .neon {
+            margin-top: 24vw;
+        }
+    }
